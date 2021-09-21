@@ -6,8 +6,7 @@ tasks:
     command: >
       echo 'start script' &&
       curl -s https://get.nextflow.io | bash &&
-      mv nextflow ~/bin &&
-      curl https://s3-eu-west-1.amazonaws.com/seqeralabs.com/public/nf-training.tar.gz | tar xvz
+
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
