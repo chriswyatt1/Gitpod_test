@@ -21,7 +21,9 @@ tasks:
   - command: echo 'start script'
   - command: curl https://s3-eu-west-1.amazonaws.com/seqeralabs.com/public/nf-training.tar.gz | tar xvz 
   - command: curl -s https://get.nextflow.io | bash
-  - command: mkdir /workspace/bin ; cp ./nextflow /workspace/bin/nextflow ; export PATH=/workspace/bin:$PATH
+  - command: mkdir /workspace/bin
+  - command: cp ./nextflow /workspace/bin/nextflow  
+  - command: export PATH=/workspace/bin:$PATH
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
