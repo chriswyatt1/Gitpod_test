@@ -22,8 +22,8 @@ tasks:
   - init: curl https://s3-eu-west-1.amazonaws.com/seqeralabs.com/public/nf-training.tar.gz | tar xvz 
   - init: curl -s https://get.nextflow.io | bash
   - init: mkdir /workspace/bin
-  - init: cp ./nextflow /workspace/bin/nextflow  
-  - init: export PATH=/workspace/bin:$PATH
+  - command: cp ./nextflow /workspace/bin/nextflow  
+  - command: export PATH=/workspace/bin:$PATH
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
