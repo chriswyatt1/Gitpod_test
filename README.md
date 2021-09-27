@@ -39,6 +39,9 @@ To enable prebuilt workspaces for a GitHub repository, follow these steps:
 Here you can see the enviroment with all the files from within your git repo (this is like a git clone into the cloud).
 I have had permissions issues here using the seqeralabs git repo, but if you are the owner of the repo, it should be straight forward.
   
+You can also initiate a gitpod env from github, once you have installed the app (step 1). Then you can find this button in your github: ![image](https://user-images.githubusercontent.com/9978862/134880020-617e32c2-3de3-4a82-b950-3ec9d3fa3160.png)
+
+  
 5. Add your favorite VS Code themes and extensions
 You have access to all Visual Studio Code extensions published under the vendor neutral Open VSX registry. Install one by clicking the Extensions icon in the left sidebar and enter your favorite theme or VS Code extension. Add Nextflow.
   
