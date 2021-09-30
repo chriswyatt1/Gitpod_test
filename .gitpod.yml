@@ -20,11 +20,12 @@ tasks:
   - name: Download Nextflow Tutorial
     init: |
       echo 'init script' # runs during prebuild
-      echo 'start script'
       curl -s https://get.nextflow.io | bash
-      sudo cp ./nextflow /bin/nextflow
+      mkdir /workspace/bin
+      cp ./nextflow /workspace/bin/nextflow  
+      export PATH=/workspace/bin:$PATH
       nextflow info
-    command: echo 'start script'
+    command: echo 'Starting workspace !'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
