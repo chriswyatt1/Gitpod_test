@@ -2,7 +2,7 @@
 
 Gitpod is a container-based dev platform that provisions ready-to-code environments in the cloud accessible through your browser.
 
-Steps to run gitpod.
+Steps to run gitpod and explore the Nextflow training gitpod.
 
 1. Install gitpod app: https://github.com/apps/gitpod-io/installations/new
 
@@ -11,9 +11,10 @@ Here gitpod will open an enviroment with all the files from within your git repo
 
 You can also initiate a gitpod env from github, once you have installed the app (step 1). Then you can find this button in your github: ![image](https://user-images.githubusercontent.com/9978862/134880020-617e32c2-3de3-4a82-b950-3ec9d3fa3160.png)
   
-3.  
+3. Try opening the Nextflow training gitpod and check out its yml!
+  
 For Nextflow training check out : 
-[gitpod.io/#https://github.com/chriswyatt1/Gitpod_test/](gitpod.io/#https://github.com/chriswyatt1/Gitpod_test/)
+[https://gitpod.io/#https://github.com/chriswyatt1/Gitpod_test/](https://gitpod.io/#https://github.com/chriswyatt1/Gitpod_test/)
 
 - Nextflow is installed and the tutorial data downloaded within the task commands of the .gitpod.yml.
   
