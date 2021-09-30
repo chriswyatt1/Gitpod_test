@@ -22,7 +22,7 @@ tasks:
       echo 'init script' # runs during prebuild
       echo 'start script'
       curl -s https://get.nextflow.io | bash
-      cp ./nextflow /usr/local/bin/nextflow
+      cp ./nextflow /bin/nextflow
       nextflow info
     command: echo 'start script'
 
