@@ -22,6 +22,10 @@ tasks:
       echo 'init script' # runs during prebuild
       echo 'start script'
       curl -s https://get.nextflow.io | bash
+      mkdir /workspace/bin
+      cp ./nextflow /workspace/bin/nextflow  
+      export PATH=/workspace/bin:$PATH
+      nextflow info
     command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
