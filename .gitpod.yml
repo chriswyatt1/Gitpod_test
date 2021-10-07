@@ -17,6 +17,9 @@ github:
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
+  - name: Web serverer
+    command: npx browser-sync start -s -w --index Example.html --port 8000
+    
   - name: Download Nextflow Tutorial
     init: |
       echo 'init script' # runs during prebuild
@@ -26,9 +29,6 @@ tasks:
       echo 'Starting workspace !'
       export PATH=/workspace/Gitpod_test:$PATH
       nextflow info
-      
-  - name: Web serverer
-    command: npx browser-sync start -s -w --index Example.html --port 8000
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
