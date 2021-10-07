@@ -26,7 +26,7 @@ tasks:
       echo 'Starting workspace !'
       export PATH=/workspace/Gitpod_test:$PATH
       nextflow info
-      npx browser-sync start -s -w
+      gp preview file://$GITPOD_REPO_ROOT/Example.html
 
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
