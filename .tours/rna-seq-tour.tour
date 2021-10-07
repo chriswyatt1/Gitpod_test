@@ -1,0 +1,57 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "RNA-Seq tour",
+  "steps": [
+    {
+      "file": "script7.nf",
+      "description": "Paramaters can be specified with params plus a '.' then the parameter name. This tells Nextflow that it is a parameter that can be set in the command line using a flag. So params.reads can be changed at the command line with --reads <path/to/reads>.",
+      "line": 4
+    },
+    {
+      "file": "script7.nf",
+      "description": "log.info provides the user information to pront to screen at the beginning of a Nextflow run.",
+      "line": 9
+    },
+    {
+      "file": "script7.nf",
+      "description": "This is our first process block, called \"index\". \nIt is split into out inputs, outputs and script to run.",
+      "line": 23
+    },
+    {
+      "file": "script7.nf",
+      "description": "Our input take **from** the parameter \"transcriptome_file\", which we assigned in line 5, which is a path to a file. \nWe then assign this file/path a variable name to be used within the process block. This can be called in the script block using the dollar sign before the variable name (see line 33).",
+      "line": 26
+    },
+    {
+      "file": "script7.nf",
+      "description": "Next, we assign the output to expect from this process. Here, we expect to find a path to a file called \"index\", and we send the result to the \"index_ch\" (the index output channel), this is so we can use this output in a subsequent process. \n\nNOTE: Some script can produce multiple output files, but we specify here that we are only interested in the file called \"index\", in order for the script to run without error. We could have also added another output file to expect and put into a another channel. ",
+      "line": 29
+    },
+    {
+      "file": "script7.nf",
+      "description": "The script between triple exclamation points (\"\"\"), is out main code block to run, and can be in any coding language or program, as long as they are in your $PATH. Here we run the program 'salmon' and its subprocess 'index'. We also set the number of cpus to use for this script ($task.cpus), create a link to the input transcriptome variable ($transcriptome) and an output file name 'index', which the output is expecting (line 29). \nHere salmon must be in the $PATH if you are running this locally. In our case, in this gitpod environment, we do not have salmon installed. Try typing salmon in your terminal!. Therefore we use a docker container which contains the salmon program in order for our script to run. Using the flag -with-docker",
+      "line": 33
+    },
+    {
+      "file": "nextflow.config",
+      "description": "When runnning Nextflow, the nextflow.config file is automatically read.\nIn the first line, we have the assigned container 'nextflow/rnaseq-nf' assigned to the process.container. This tells Nextflow to run a docker container (which contains the salmon script), which you can find on docker hub (https://hub.docker.com/r/nextflow/rnaseq-nf/).\nIf we didn't have this setting the nextflow.config, we would have had to write -with-docker nextflow/rnaseq-nf in the command line.",
+      "line": 1,
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 22
+        },
+        "end": {
+          "line": 1,
+          "character": 40
+        }
+      }
+    },
+    {
+      "file": "script7.nf",
+      "description": "Then next step, opens a Nextflow channel from the reads parameter, using the appendage .fromFilePairs, which is a native Nextflow function, that assigns paired reads into a channel to be used each pair at a time. We use the .into appendage to tell nextflow to save this data structure into two different channels with the same contents (i.e. all the pairs of reads)",
+      "line": 38
+    }
+  ],
+  "ref": "main"
+}
