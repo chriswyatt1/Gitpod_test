@@ -21,6 +21,9 @@ tasks:
     init: |
       echo 'init script' # runs during prebuild
       curl -s https://get.nextflow.io | bash
+      yarn install
+      bundle install
+      env PORT=4001 yarn run dev
       
     command: |
       echo 'Starting workspace !'
@@ -29,7 +32,7 @@ tasks:
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 8080
+  - port: 4001
     onOpen: open-preview
     
 vscode:
