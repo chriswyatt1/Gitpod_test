@@ -17,8 +17,10 @@ github:
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Web serverer
-    command: npx browser-sync start -s -w --index Example.html --port 8000
+  - name: Web server
+    command: npx browser-sync start -s -w --index Example.html --port 8000    
+    image: gitpod/workspace-full-vnc
+
     
   - name: Download Nextflow Tutorial
     init: |
@@ -34,7 +36,8 @@ tasks:
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 8000
-    
+  - port: 6080
+  
 vscode:
   extensions:
    - nextflow.nextflow
