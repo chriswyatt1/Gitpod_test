@@ -24,6 +24,7 @@ tasks:
     init: |
       echo 'init script' # runs during prebuild
       curl -s https://get.nextflow.io | bash
+      sudo apt install tree
       
     command: |
       echo 'Starting workspace !'
