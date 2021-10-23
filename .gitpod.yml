@@ -34,6 +34,8 @@ tasks:
       export PATH=/workspace/Gitpod_test:$PATH
       nextflow info
       unset JAVA_TOOL_OPTIONS
+      #Remove Dockerfile from directory, so user can create their own for training.
+      rm Dockerfile  
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
