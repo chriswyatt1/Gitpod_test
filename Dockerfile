@@ -11,12 +11,13 @@ RUN apt-get update \
   wget \
   build-essential \
   uuid-dev \
-  libgpgme-dev \
+  libssl-dev \
+  libgpgme11-dev \
   squashfs-tools \
   libseccomp-dev \
   pkg-config \
   git \
-  cryptsetup-bin && sudo rm -rf /var/lib/apt/lists/*
+  cryptsetup
 
 RUN mkdir -p /workspace/data \
     && chown -R gitpod:gitpod /workspace/data
