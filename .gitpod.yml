@@ -27,14 +27,15 @@ tasks:
     init: |
       echo 'init script' # runs during prebuild
       curl -s https://get.nextflow.io | bash
-      sudo apt install tree
+      
       
     command: |
-      echo 'Starting workspace !'
+      sudo apt install tree
       export PATH=/workspace/Gitpod_test:$PATH
       nextflow info
       unset JAVA_TOOL_OPTIONS
       alias conda_activate=". /opt/conda/etc/profile.d/conda.sh; conda activate base"
+      echo 'Starting workspace !'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
