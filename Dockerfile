@@ -19,20 +19,11 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
-    alias start_conda=". /opt/conda/etc/profile.d/conda.sh; conda activate base"
     
 RUN chown -R gitpod:gitpod /opt/conda \
     && chmod -R 777 /opt/conda \
     && chown -R gitpod:gitpod /home/gitpod/.conda \
     && chmod -R 777 /home/gitpod/.conda
-
-RUN wget https://github.com/singularityware/singularity/releases/download/v3.5.3/singularity-3.5.3.tar.gz \
-    && tar -xzvf singularity-3.5.3.tar.gz \
-    && cd singularity \
-    && ./mconfig \
-    && cd builddir \
-    && make \
-    && sudo make install 
 
 
 # Give back control
