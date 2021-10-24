@@ -35,7 +35,8 @@ tasks:
       nextflow info
       unset JAVA_TOOL_OPTIONS
       #Remove Dockerfile from directory, so user can create their own for training.
-      rm Dockerfile  
+      rm Dockerfile
+      alias conda_activate=". /opt/conda/etc/profile.d/conda.sh; conda activate base"
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
