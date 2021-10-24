@@ -8,16 +8,7 @@ RUN apt-get update \
   sudo \
   git \
   less \
-  wget \
-  build-essential \
-  uuid-dev \
-  libssl-dev \
-  libgpgme11-dev \
-  squashfs-tools \
-  libseccomp-dev \
-  pkg-config \
-  git \
-  cryptsetup
+  wget
 
 RUN mkdir -p /workspace/data \
     && chown -R gitpod:gitpod /workspace/data
