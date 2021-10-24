@@ -8,13 +8,12 @@ RUN apt-get update \
   sudo \
   git \
   less \
-  wget
+  wget \
   build-essential \
   uuid-dev \
   libgpgme-dev \
   squashfs-tools \
   libseccomp-dev \
-  wget \
   pkg-config \
   git \
   cryptsetup-bin && sudo rm -rf /var/lib/apt/lists/*
