@@ -18,7 +18,8 @@ RUN mkdir /home/gitpod/.conda
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
-    ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh 
+    ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
+    alias start_conda=". /opt/conda/etc/profile.d/conda.sh; conda activate base"
     
 RUN chown -R gitpod:gitpod /opt/conda \
     && chmod -R 777 /opt/conda \
