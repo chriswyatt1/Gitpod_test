@@ -9,6 +9,15 @@ RUN apt-get update \
   git \
   less \
   wget
+  build-essential \
+  uuid-dev \
+  libgpgme-dev \
+  squashfs-tools \
+  libseccomp-dev \
+  wget \
+  pkg-config \
+  git \
+  cryptsetup-bin && sudo rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /workspace/data \
     && chown -R gitpod:gitpod /workspace/data
