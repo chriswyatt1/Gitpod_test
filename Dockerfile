@@ -27,6 +27,14 @@ RUN chown -R gitpod:gitpod /opt/conda \
     && chown -R gitpod:gitpod /home/gitpod/.conda \
     && chmod -R 777 /home/gitpod/.conda
 
+RUN wget https://github.com/singularityware/singularity/releases/download/v3.5.3/singularity-3.5.3.tar.gz \
+    && tar -xzvf singularity-3.5.3.tar.gz \
+    && cd singularity \
+    && ./mconfig \
+    && cd builddir \
+    && make \
+    && sudo make install 
+
 
 # Give back control
 USER root
