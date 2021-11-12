@@ -27,11 +27,11 @@ tasks:
     init: |
       echo 'init script' # runs during prebuild
       curl -s https://get.nextflow.io | bash
+      sudo apt install  -y tree
+      sudo apt install  -y graphviz
       
       
     command: |
-      sudo apt install  -y tree
-      sudo apt install  -y graphviz
       export PATH=/workspace/Gitpod_test:$PATH
       nextflow info
       unset JAVA_TOOL_OPTIONS
