@@ -48,4 +48,13 @@ To enable prebuilt workspaces for a GitHub repository, follow these steps:
   
 This will enable the prebuild so that when you open the gitpod again in this repo, it will load faster from the prebuild.
 
-5. To enable conda use: `conda_activate`
+7. Add a interactive web env for webpage (see in gitpod.yml)
+  
+```
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - name: Web serverer
+    command: npx browser-sync start -s -w --index Example.html --port 8000  
+```
+  
+6. To enable conda use: `conda_activate`
