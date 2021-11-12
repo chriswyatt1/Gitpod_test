@@ -48,3 +48,4 @@ To enable prebuilt workspaces for a GitHub repository, follow these steps:
   
 This will enable the prebuild so that when you open the gitpod again in this repo, it will load faster from the prebuild.
 
+5. To enable conda use: `conda_activate`
