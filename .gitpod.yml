@@ -27,12 +27,12 @@ tasks:
     init: |
       echo 'init script' # runs during prebuild
       curl -s https://get.nextflow.io | bash
-      sudo apt install  -y tree
-      sudo apt install  -y graphviz
       
       
     command: |
       export PATH=/workspace/Gitpod_test:$PATH
+      sudo apt install  -y tree
+      sudo apt install  -y graphviz
       nextflow info
       unset JAVA_TOOL_OPTIONS
       alias conda_activate=". /opt/conda/etc/profile.d/conda.sh; conda activate base"
