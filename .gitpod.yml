@@ -21,7 +21,7 @@ image:
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - name: Web serverer
-    command: npx browser-sync start -s -w --index Example.html --port 8000
+    command: npx browser-sync start -s -w -y --index Example.html --port 8000
     
   - name: Download Nextflow Tutorial
     init: |
