@@ -58,3 +58,24 @@ tasks:
 ```
   
 6. To enable conda use: `conda_activate`
+
+  
+For the tutorial, we will add these lines:
+  
+  == Using Gitpod (Coming soon)
+
+Use a preconfigured Nexflow development environment using Gitpod. 
+
+*Requirements*:
+
+ * GitHub, GitLab or BitBucket account
+ * Web browser (Google Chrome, Firefox)
+
+*Future Steps*:
+
+- Link to Seqera Training landing page.
+- Open the link recieved in your email.
+- Proceed with Nextflow tutorial.
+
+
+
